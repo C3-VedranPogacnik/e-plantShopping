@@ -52,7 +52,10 @@ const CartItem = ({ onContinueShopping, onSetRemovedToCart }) => {
     }
   };
 
-  const handleRemove = (item) => {
+  const handleRemove = (anItem) => {
+    dispatch(
+      removeItem(anItem.name)
+    );
   };
 
   // Calculate total cost based on quantity for an item
