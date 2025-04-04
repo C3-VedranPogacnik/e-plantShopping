@@ -246,14 +246,14 @@ function ProductList({ onHomeClick }) {
         onHomeClick();
     };
 
-   const handleAddToCart = (aProduct) => {
+   const handleAddToCart = (product) => {
         dispatch(
-            addItem(aProduct)
+            addItem(product)
         );
         setAddedToCart((prevState) => (
             {
                 ...prevState ,
-                [aProduct.name] : true,
+                [product.name] : true,
             }));
     };
     
